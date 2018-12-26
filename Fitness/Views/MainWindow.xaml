@@ -27,7 +27,7 @@
             <RowDefinition Height="375*"/>
         </Grid.RowDefinitions>
 
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="50" FontFamily="Alexandra Zeferino Two" FontWeight="Bold" >Фитнес менеджер</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="50" FontFamily="{StaticResource PrimaryFont}" FontWeight="Bold" >Фитнес менеджер</Label>
 
         <StackPanel Grid.Row="1" Margin="200,10" VerticalAlignment="Center">
             <Button FontFamily="{StaticResource PrimaryFont}" Style="{StaticResource ButtonStyle}" Command="{Binding DisplayClients}" Height="50" Margin="20" FontSize="40">Клиенты</Button>
