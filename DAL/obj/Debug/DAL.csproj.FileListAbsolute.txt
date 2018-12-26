@@ -1,0 +1,13 @@
+J:\Курсовая\Fitness\DAL\bin\Debug\DAL.dll.config
+J:\Курсовая\Fitness\DAL\bin\Debug\DAL.dll
+J:\Курсовая\Fitness\DAL\bin\Debug\DAL.pdb
+J:\Курсовая\Fitness\DAL\bin\Debug\EntityFramework.dll
+J:\Курсовая\Fitness\DAL\bin\Debug\EntityFramework.SqlServer.dll
+J:\Курсовая\Fitness\DAL\bin\Debug\EntityFramework.xml
+J:\Курсовая\Fitness\DAL\bin\Debug\EntityFramework.SqlServer.xml
+J:\Курсовая\Fitness\DAL\bin\Debug\ru\EntityFramework.resources.dll
+J:\Курсовая\Fitness\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+J:\Курсовая\Fitness\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+J:\Курсовая\Fitness\DAL\obj\Debug\DAL.csproj.CopyComplete
+J:\Курсовая\Fitness\DAL\obj\Debug\DAL.dll
+J:\Курсовая\Fitness\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,51 @@
+﻿<Window x:Class="Fitness.Views.ClientsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fitness.Views"
+        xmlns:vm="clr-namespace:Fitness.ViewModels"
+        mc:Ignorable="d"
+        Title="ClientsWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary Source="../Resources.xaml"></ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush ImageSource="/Fitness;component/Resources/backg.jpg"
+                    Stretch="Fill" TileMode="Tile"
+                    ViewportUnits="Absolute" Viewport="0,0,1024,768" Opacity="0.9"/>
+    </Window.Background>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="375*"/>
+        </Grid.RowDefinitions>
+        <Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontFamily="{StaticResource PrimaryFont}" FontWeight="Bold"  >Клиенты</Label>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button FontFamily="{StaticResource PrimaryFont}" Style="{StaticResource ButtonStyle}" FontSize="25" Command="{Binding AddNewClient}" Width="150" Margin="5">Зарегистрировать</Button>
+            <Button FontFamily="{StaticResource PrimaryFont}" Style="{StaticResource ButtonStyle}" FontSize="25" Command="{Binding EditClient}" Width="100" Margin="5">Изменить</Button>
+            <Button FontFamily="{StaticResource PrimaryFont}" Style="{StaticResource ButtonStyle}" FontSize="25" Command="{Binding DeleteClient}" Width="100" Margin="5">Удалить</Button>
+            <Button FontFamily="{StaticResource PrimaryFont}" Style="{StaticResource ButtonStyle}" FontSize="25" Command="{Binding AddNewVisiting}" Width="200" Margin="200,5">Добавить новое посещение</Button>
+        </StackPanel>
+        <ListBox Background="{StaticResource ListBoxBack}"  Grid.Row="2" ItemsSource="{Binding Clients}" FontSize="15" SelectedItem="{Binding SelectedClient}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path=FIO}"  Foreground="White" />
+                        <TextBlock Text="{Binding Path=BirthDay}"  Foreground="White" />
+                        <TextBlock>
+                            <Hyperlink Foreground="White" Command="{Binding DataContext.DisplaySubscription, RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}" CommandParameter="{Binding}">Абонемент</Hyperlink>
+                        </TextBlock>
+                        <TextBlock>
+                            <Hyperlink Command="{Binding DataContext.DisplayVisitings, RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}" CommandParameter="{Binding}" Foreground="White">Посещения</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

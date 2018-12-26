@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Fitness.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.Commands.DelegateCommand" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.ViewModels.ClientsViewModel" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Clients" Type="DAL.Client" FixedFromPoint="true">
+      <Path>
+        <Point X="5.062" Y="4.497" />
+        <Point X="5.062" Y="6.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="0.452" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="SelectedClient" Type="DAL.Client" FixedFromPoint="true">
+      <Path>
+        <Point X="5.562" Y="4.497" />
+        <Point X="5.562" Y="6.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.18" Y="1.333" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQIQBAICQBAAQkgAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>ViewModels\ClientsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SelectedClient" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Clients" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.ViewModels.MenuViewModel" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAACAAAAgAAAIAAAAABAhAgAAAAAAIACAASAAgA=</HashCode>
+      <FileName>ViewModels\MenuViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.402" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.ViewModels.TrainersViewModel" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIAAgBEAAIQBAAQICAAEAAAgAEAAAACACAAEBAAABA=</HashCode>
+      <FileName>ViewModels\TrainersViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SelectedTrainer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Trainers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.ViewModels.TrainingsViewModel" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Trainings" Type="DAL.Training" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="5.628" />
+        <Point X="7.875" Y="5.628" />
+        <Point X="7.875" Y="6.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.19" Y="0.488" Height="0.182" Width="0.95" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Trainers" Type="DAL.Trainer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.848" Y="0.436" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="SelectedTraining" Type="DAL.Training" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="5.5" />
+        <Point X="6.844" Y="5.5" />
+        <Point X="6.844" Y="6.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.498" Y="1.326" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAIAAQBAAAEQAEAQIABAUgAAkAMAABACAAAAQBAAAAA=</HashCode>
+      <FileName>ViewModels\TrainingsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SelectedTraining" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Trainings" />
+      <Property Name="Trainers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.Views.ClientsWindow" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ClientsWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.Views.TrainersWindow" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\TrainersWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.Views.TrainerWindow" BaseTypeListCollapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\TrainerWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.Views.TrainingsWindow" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\TrainingsWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Fitness.Views.TrainingWindow" BaseTypeListCollapsed="true">
+    <Position X="15" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\TrainingWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DAL.Training">
+    <Position X="6.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DAL.Trainer">
+    <Position X="8.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DAL.Client">
+    <Position X="4.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

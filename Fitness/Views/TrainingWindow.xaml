@@ -1,0 +1,67 @@
+﻿<Window x:Name="AddTrainer" 
+        x:Class="Fitness.Views.TrainingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fitness.Views"
+        xmlns:vm="clr-namespace:Fitness.ViewModels"
+        xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Training" Height="400" Width="464">
+
+    <Window.Background>
+        <ImageBrush ImageSource="/Fitness;component/Resources/backg.jpg"
+                    ViewportUnits="Absolute" Viewport="0,0,1024,768" Opacity="0.9" TileMode="Tile"/>
+    </Window.Background>
+
+    <Window.Resources>
+        <ResourceDictionary Source="../Resources.xaml"></ResourceDictionary>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <vm:TrainingsViewModel></vm:TrainingsViewModel>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="TitleLabel" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45" FontFamily="{StaticResource PrimaryFont}" FontWeight="Bold" Grid.ColumnSpan="2"></Label>
+
+        <Grid x:Name="Panel" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="12*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Foreground="White" Grid.Column="0" VerticalAlignment="Center" FontFamily="{StaticResource PrimaryFont}" FontSize="25" Content="Название:"/>
+            <TextBox Foreground="White"  Background="{StaticResource ListBoxBack}" Grid.Column="1" VerticalAlignment="Center" FontFamily="{StaticResource PrimaryFont}" FontSize="30" Text="{Binding Name}" Margin="0,0,10,0"></TextBox>
+            <Label Foreground="White" Grid.Row="1" VerticalAlignment="Center" Grid.Column="0" FontFamily="{StaticResource PrimaryFont}" FontSize="25" Content="Дата/время начала:"/>
+            <toolkit:DateTimePicker Foreground="White"  Background="{StaticResource ListBoxBack}" Grid.Row="1" VerticalAlignment="Center" Grid.Column="1" FontSize="20" Value="{Binding StartDate}" Margin="0,0,10,0" Format="UniversalSortableDateTime"/>
+            <Label Foreground="White" Grid.Row="2" VerticalAlignment="Center" Grid.Column="0" FontFamily="{StaticResource PrimaryFont}" FontSize="25" Content="Дата/время конца:"/>
+            <toolkit:DateTimePicker Foreground="White" Background="{StaticResource ListBoxBack}" Grid.Row="2" VerticalAlignment="Center" Grid.Column="1" FontSize="20" Value="{Binding EndDate}" Margin="0,0,10,0" Format="UniversalSortableDateTime"/>
+            <Label Foreground="White" Grid.Row="3" VerticalAlignment="Center" FontFamily="{StaticResource PrimaryFont}" FontSize="25" Content="Тренер:"/>
+            <ComboBox x:Name="Combobox" SelectedValue="{Binding TrainerID}" Background="{StaticResource ListBoxBack}" Foreground="Black"  Grid.Row="3" IsEditable="False" Grid.Column="1" VerticalAlignment="Center" FontFamily="{StaticResource PrimaryFont}" FontSize="30" Margin="0,0,10,0"
+              DisplayMemberPath="FIO"
+              SelectedValuePath="ID" />
+            <Label Foreground="White" Grid.Row="4" VerticalAlignment="Center" FontFamily="{StaticResource PrimaryFont}" FontSize="25" Content="Цена:"/>
+            <TextBox Foreground="White" Grid.Row="4"  Background="{StaticResource ListBoxBack}" Grid.Column="1" VerticalAlignment="Center" FontFamily="{StaticResource PrimaryFont}" FontSize="30" Text="{Binding Price}" Margin="0,0,10,0"></TextBox>
+        </Grid>
+        <Button x:Name="Button" Command="{Binding CloseWindow}" CommandParameter="{Binding ElementName=AddTrainer}" Style="{StaticResource ButtonStyle}" FontFamily="{StaticResource PrimaryFont}" Grid.Row="2" Margin="60,15,60,15" FontSize="30" FontWeight="Bold" Grid.ColumnSpan="2"></Button>
+    </Grid>
+</Window>

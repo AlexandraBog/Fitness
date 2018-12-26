@@ -1,0 +1,43 @@
+﻿<Window x:Name="NewSubscriptionWindow" x:Class="Fitness.Views.SubscriptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fitness.Views"
+        xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="SubscriptionWindow" Height="368.87" Width="510.096">
+
+    <Window.Resources>
+        <ResourceDictionary Source="../Resources.xaml"></ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush ImageSource="/Fitness;component/Resources/backg.jpg" Viewport="0,0,1024,768" Opacity="0.9" ViewportUnits="Absolute"/>
+    </Window.Background>
+    <Grid x:Name="SubscriptionGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="211*"/>
+            <ColumnDefinition Width="291*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="43*"/>
+        </Grid.RowDefinitions>
+
+        <Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45" FontFamily="{StaticResource PrimaryFont}" FontWeight="Bold" Grid.ColumnSpan="2" Margin="176,0">Абонемент</Label>
+
+        <Label Foreground="White" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" FontFamily="{StaticResource PrimaryFont}" FontSize="25" Content="Цена:" Margin="0,2"/>
+        <TextBox Foreground="White"  Grid.Row="4" Background="{StaticResource ListBoxBack}" Grid.Column="1" VerticalAlignment="Center" FontFamily="{StaticResource PrimaryFont}" FontSize="35" Text="{Binding Price}" Margin="0,3,10,2"></TextBox>
+        <Label Foreground="White" Grid.Row="2" VerticalAlignment="Center" Grid.Column="0" FontFamily="{StaticResource PrimaryFont}" FontSize="25" Content="Дата/время начала:"/>
+        <toolkit:DateTimePicker Grid.Row="2" Foreground="White"  Background="{StaticResource ListBoxBack}" VerticalAlignment="Center" Grid.Column="1" FontSize="20" Value="{Binding TimeOfActionStart}" Margin="0,0,10,0" Format="ShortDate"/>
+        <Label Foreground="White" Grid.Row="3" VerticalAlignment="Center" Grid.Column="0" FontFamily="{StaticResource PrimaryFont}" FontSize="25" Content="Дата/время конца:"/>
+        <toolkit:DateTimePicker Grid.Row="3" Foreground="White" Background="{StaticResource ListBoxBack}" VerticalAlignment="Center" Grid.Column="1" FontSize="20" Value="{Binding TimeOfActionEnd}" Margin="0,0,10,0" Format="ShortDate"/>
+
+        <Button Command="{Binding DataContext.CloseWindow, RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}" CommandParameter="{Binding ElementName=NewSubscriptionWindow}" Grid.Row="5" Grid.ColumnSpan="2" FontFamily="{StaticResource PrimaryFont}" Style="{StaticResource ButtonStyle}" FontSize="30" Margin="150,5,150,5">Добавить</Button>
+    </Grid>
+</Window>
